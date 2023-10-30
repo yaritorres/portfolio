@@ -3,23 +3,93 @@
   min-height: 90vh;
   border: red solid 2px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.homeTabContainer {
-  border: blue solid 2px;
+.headerContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.tabContainer {
   height: 60vh;
-  width: 30vw;
+  width: 36vw;
 }
 
 .homeHeader {
   border: green solid 2px;
-  width: 10vw;
+  border-bottom: none;
+  border-radius: 10px 10px 0px 0px;
+  width: 12vw;
   height: 10vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: 'Atkins Hyperlegible', sans-serif;
+  font-size: 20px;
+}
+
+.homeBody {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: green solid 2px;
+  border-top: none;
+  border-radius: 0px 0px 10px 10px;
+  height: 100%;
+  font-family: 'Atkins Hyperlegible', sans-serif;
+  font-size: 20px;
+}
+
+.aboutHeader {
+  border: red solid 2px;
+  border-bottom: none;
+  border-radius: 10px 10px 0px 0px;
+  width: 12vw;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Atkins Hyperlegible', sans-serif;
+  font-size: 20px;
+}
+
+.aboutBody {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: red solid 2px;
+  border-top: none;
+  border-radius: 0px 0px 10px 10px;
+  height: 100%;
+  font-family: 'Atkins Hyperlegible', sans-serif;
+  font-size: 20px;
+}
+
+.contactHeader {
+  border: blue solid 2px;
+  border-bottom: none;
+  border-radius: 10px 10px 0px 0px;
+  width: 12vw;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Atkins Hyperlegible', sans-serif;
+  font-size: 20px;
+}
+
+.contactBody {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border: blue solid 2px;
+  border-top: none;
+  border-radius: 0px 0px 10px 10px;
+  height: 100%;
   font-family: 'Atkins Hyperlegible', sans-serif;
   font-size: 20px;
 }
