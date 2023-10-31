@@ -1,7 +1,6 @@
 .matrixContainer {
   min-width: 100%;
   min-height: 90vh;
-  border: red solid 2px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -11,11 +10,6 @@
 .headerContainer {
   display: flex;
   flex-direction: row;
-}
-
-.tabContainer {
-  height: 60vh;
-  width: 36vw;
 }
 
 .homeHeader {
@@ -38,9 +32,17 @@
   border: green solid 2px;
   border-top: none;
   border-radius: 0px 0px 10px 10px;
+  height: 60vh;
+  width: 36vw;
+  padding: 2%;
+}
+
+.bodyText {
+  border: red solid 2px;
   height: 100%;
   font-family: 'Atkins Hyperlegible', sans-serif;
-  font-size: 20px;
+  font-size: 25px;
+  padding: 2%;
 }
 
 .aboutHeader {
@@ -57,15 +59,19 @@
 }
 
 .aboutBody {
-  display: flex;
   align-items: center;
   justify-content: center;
   border: red solid 2px;
   border-top: none;
   border-radius: 0px 0px 10px 10px;
-  height: 100%;
-  font-family: 'Atkins Hyperlegible', sans-serif;
-  font-size: 20px;
+  height: 60vh;
+  width: 36vw;
+  padding: 2%;
+}
+
+.aboutImage {
+  float: left;
+  margin: 2%;
 }
 
 .contactHeader {
@@ -89,7 +95,15 @@
   border: blue solid 2px;
   border-top: none;
   border-radius: 0px 0px 10px 10px;
-  height: 100%;
-  font-family: 'Atkins Hyperlegible', sans-serif;
-  font-size: 20px;
+  height: 60vh;
+  width: 36vw;
+  padding: 2%;
+}
+
+.tabBody {
+  background-color: rgb(152, 152, 152);
+}
+
+.tabHeader {
+  background-color: rgb(152, 152, 152);
 }

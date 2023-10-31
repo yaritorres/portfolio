@@ -3,7 +3,9 @@ import styles from '../styles/navbar.module.css';
 export default function Navbar() {
   return (
     <div className={styles.navbar}>
-      yari torres nicola
+      <div className={styles.nameContainer}>
+        <p>yari</p> <p>torres</p> <p>nicola</p>
+      </div>
     </div>
   )
 }
