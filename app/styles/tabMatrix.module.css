@@ -10,14 +10,18 @@
 .headerContainer {
   display: flex;
   flex-direction: row;
+  width: 36vw;
+}
+
+.tabHeader {
+  height: 7vh;
+  width: 8vw;
 }
 
 .homeHeader {
-  border: green solid 2px;
+  border: black solid 2px;
   border-bottom: none;
   border-radius: 10px 10px 0px 0px;
-  width: 12vw;
-  height: 10vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,28 +33,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: green solid 2px;
-  border-top: none;
-  border-radius: 0px 0px 10px 10px;
-  height: 60vh;
-  width: 36vw;
-  padding: 2%;
-}
-
-.bodyText {
-  border: red solid 2px;
-  height: 100%;
-  font-family: 'Atkins Hyperlegible', sans-serif;
-  font-size: 25px;
-  padding: 2%;
 }
 
 .aboutHeader {
-  border: red solid 2px;
+  border: black solid 2px;
   border-bottom: none;
   border-radius: 10px 10px 0px 0px;
-  width: 12vw;
-  height: 10vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -59,14 +47,6 @@
 }
 
 .aboutBody {
-  align-items: center;
-  justify-content: center;
-  border: red solid 2px;
-  border-top: none;
-  border-radius: 0px 0px 10px 10px;
-  height: 60vh;
-  width: 36vw;
-  padding: 2%;
 }
 
 .aboutImage {
@@ -75,11 +55,9 @@
 }
 
 .contactHeader {
-  border: blue solid 2px;
+  border: black solid 2px;
   border-bottom: none;
   border-radius: 10px 10px 0px 0px;
-  width: 12vw;
-  height: 10vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -92,18 +70,24 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  border: blue solid 2px;
+}
+
+.bodyText {
+  height: 100%;
+  font-family: 'Atkins Hyperlegible', sans-serif;
+  font-size: 25px;
+  padding: 2%;
+}
+
+.tabBody {
+  border: black solid 2px;
   border-top: none;
-  border-radius: 0px 0px 10px 10px;
+  border-radius: 0px 10px 10px 10px;
   height: 60vh;
   width: 36vw;
   padding: 2%;
 }
 
-.tabBody {
-  background-color: rgb(152, 152, 152);
-}
-
-.tabHeader {
-  background-color: rgb(152, 152, 152);
+@keyframes fadeIn {
+  from {background-color: ;}
 }

@@ -4,14 +4,29 @@ import { useState } from 'react';
 
 export default function TabMatrix() {
   const [activeTab, setActiveTab] = useState('home');
-  const homeTabStyles = {
-    display: activeTab === 'home' ? 'block' : 'none',
+  const homeBodyStyles = {
+    display: activeTab === 'home' ? 'flex' : 'none',
+    backgroundColor: activeTab === 'home' ? '#7765E3' : '#C8ADC0',
   }
-  const aboutTabStyles = {
+  const homeHeaderStyles = {
+    borderBottom: activeTab === 'home' ? 'none' : 'black solid 2px',
+    backgroundColor: activeTab === 'home' ? '#7765E3' : '#C8ADC0',
+  }
+  const aboutBodyStyles = {
     display: activeTab === 'about' ? 'block' : 'none',
+    backgroundColor: activeTab === 'about' ? '#7765E3' : '#C8ADC0',
   }
-  const contactTabStyles = {
-    display: activeTab === 'contact' ? 'block' : 'none',
+  const aboutHeaderStyles = {
+    borderBottom: activeTab === 'about' ? 'none' : 'black solid 2px',
+    backgroundColor: activeTab === 'about' ? '#7765E3' : '#C8ADC0',
+  }
+  const contactBodyStyles = {
+    display: activeTab === 'contact' ? 'flex' : 'none',
+    backgroundColor: activeTab === 'contact' ? '#7765E3' : '#C8ADC0',
+  }
+  const contactHeaderStyles = {
+    borderBottom: activeTab === 'contact' ? 'none' : 'black solid 2px',
+    backgroundColor: activeTab === 'contact' ? '#7765E3' : '#C8ADC0',
   }
 
   return (
@@ -20,30 +35,30 @@ export default function TabMatrix() {
         <div
           className={`${styles.homeHeader} ${styles.tabHeader}`}
           onClick={() => setActiveTab('home')}
-          style={{borderBottom: activeTab === 'home' ? 'none' : 'green solid 2px'}}
+          style={homeHeaderStyles}
         >
           <span>home</span>
         </div>
         <div
           className={`${styles.aboutHeader} ${styles.tabHeader}`}
           onClick={() => setActiveTab('about')}
-          style={{borderBottom: activeTab === 'about' ? 'none' : 'red solid 2px'}}
+          style={aboutHeaderStyles}
         >
           <span>about me</span>
         </div>
         <div
           className={`${styles.contactHeader} ${styles.tabHeader}`}
           onClick={() => setActiveTab('contact')}
-          style={{borderBottom: activeTab === 'contact' ? 'none' : 'blue solid 2px'}}
+          style={contactHeaderStyles}
         >
           <span>contact</span>
         </div>
       </div>
       <div className={styles.tabsContainer}>
-        <div className={`${styles.homeBody} ${styles.tabBody}`} style={homeTabStyles}>
+        <div className={`${styles.homeBody} ${styles.tabBody}`} style={homeBodyStyles}>
           <p className={styles.bodyText}> we're home baybee </p>
         </div>
-        <div className={`${styles.aboutBody} ${styles.tabBody}`} style={aboutTabStyles}>
+        <div className={`${styles.aboutBody} ${styles.tabBody}`} style={aboutBodyStyles}>
           <img src='../yari.jpeg' height={250} width={200} className={styles.aboutImage} />
           <p className={styles.bodyText}>
             All that separates us is an imagined distance.
@@ -76,7 +91,7 @@ export default function TabMatrix() {
             I leave our life behind when I get up.
           </p>
         </div>
-        <div className={`${styles.contactBody} ${styles.tabBody}`} style={contactTabStyles}>
+        <div className={`${styles.contactBody} ${styles.tabBody}`} style={contactBodyStyles}>
           <p className={styles.bodyText}> contact me! </p>
         </div>
       </div>
