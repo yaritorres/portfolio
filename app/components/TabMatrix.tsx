@@ -1,6 +1,7 @@
 'use client'
 import styles from '../styles/tabMatrix.module.css';
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 
 export default function TabMatrix() {
   const [activeTab, setActiveTab] = useState('home');
@@ -29,16 +30,21 @@ export default function TabMatrix() {
     backgroundColor: activeTab === 'contact' ? '#7765E3' : '#C8ADC0',
   }
 
+  const animationVar = {
+    fadeIn: { y: 0, opacity: 100 },
+    fadeOut: {y: 50, opacity: 0}
+  }
+
   return (
     <div className={styles.matrixContainer}>
       <div className={styles.headerContainer}>
-        <div
+        <motion.div
           className={`${styles.homeHeader} ${styles.tabHeader}`}
           onClick={() => setActiveTab('home')}
           style={homeHeaderStyles}
         >
           <span>home</span>
-        </div>
+        </motion.div>
         <div
           className={`${styles.aboutHeader} ${styles.tabHeader}`}
           onClick={() => setActiveTab('about')}
@@ -56,11 +62,34 @@ export default function TabMatrix() {
       </div>
       <div className={styles.tabsContainer}>
         <div className={`${styles.homeBody} ${styles.tabBody}`} style={homeBodyStyles}>
-          <p className={styles.bodyText}> we're home baybee </p>
+          <motion.p
+            animate={ activeTab === 'home' ? 'fadeIn' : 'fadeOut'}
+            variants={animationVar}
+            transition={{ duration: 0.2 }}
+            className={styles.bodyText}
+          >
+            we&apos;re home baybee
+          </motion.p>
         </div>
-        <div className={`${styles.aboutBody} ${styles.tabBody}`} style={aboutBodyStyles}>
-          <img src='../yari.jpeg' height={250} width={200} className={styles.aboutImage} />
-          <p className={styles.bodyText}>
+        <div
+          className={`${styles.aboutBody} ${styles.tabBody}`}
+          style={aboutBodyStyles}
+        >
+          <motion.img
+            animate={ activeTab === 'about' ? 'fadeIn' : 'fadeOut'}
+            variants={animationVar}
+            transition={{ duration: 0.2 }}
+            src='../yari.jpeg'
+            height={250}
+            width={200}
+            className={styles.aboutImage}
+          />
+          <motion.p
+            animate={ activeTab === 'about' ? 'fadeIn' : 'fadeOut'}
+            variants={animationVar}
+            transition={{ duration: 0.2 }}
+            className={styles.bodyText}
+          >
             All that separates us is an imagined distance.
 
             Strangers.
@@ -89,10 +118,17 @@ export default function TabMatrix() {
 
             I know I&apos;m being foolish, so,
             I leave our life behind when I get up.
-          </p>
+          </motion.p>
         </div>
         <div className={`${styles.contactBody} ${styles.tabBody}`} style={contactBodyStyles}>
-          <p className={styles.bodyText}> contact me! </p>
+          <motion.p
+            animate={ activeTab === 'contact' ? 'fadeIn' : 'fadeOut'}
+            variants={animationVar}
+            transition={{ duration: 0.2 }}
+            className={styles.bodyText}
+          >
+            contact me!
+          </motion.p>
         </div>
       </div>
     </div>

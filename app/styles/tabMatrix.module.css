@@ -46,12 +46,10 @@
   font-size: 20px;
 }
 
-.aboutBody {
-}
-
 .aboutImage {
   float: left;
   margin: 2%;
+  border: black solid 2px;
 }
 
 .contactHeader {
@@ -73,21 +71,19 @@
 }
 
 .bodyText {
-  height: 100%;
   font-family: 'Atkins Hyperlegible', sans-serif;
   font-size: 25px;
   padding: 2%;
 }
 
 .tabBody {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: black solid 2px;
   border-top: none;
   border-radius: 0px 10px 10px 10px;
   height: 60vh;
   width: 36vw;
   padding: 2%;
-}
-
-@keyframes fadeIn {
-  from {background-color: ;}
 }
