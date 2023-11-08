@@ -27,6 +27,7 @@
   align-items: center;
   font-family: 'Atkins Hyperlegible', sans-serif;
   font-size: 20px;
+  background-color: '#C8ADC0';
 }
 
 .homeBody {
@@ -38,6 +39,8 @@
 .aboutHeader {
   border: black solid 2px;
   border-bottom: none;
+  border-left: transparent;
+  border-right: transparent;
   border-radius: 10px 10px 0px 0px;
   display: flex;
   justify-content: center;

@@ -30,106 +30,124 @@ export default function TabMatrix() {
     backgroundColor: activeTab === 'contact' ? '#7765E3' : '#C8ADC0',
   }
 
-  const animationVar = {
+  const animateBodyText = {
     fadeIn: { y: 0, opacity: 100 },
-    fadeOut: {y: 50, opacity: 0}
+    fadeOut: { y: 50, opacity: 0 }
+  }
+
+  const animateTabHeader = {
+    fadeColorIn: { backgroundColor: '#7765E3' },
+    fadeColorOut: { backgroundColor: '#C8ADC0' }
   }
 
   return (
     <div className={styles.matrixContainer}>
+      { /* HEADERS */ }
       <div className={styles.headerContainer}>
         <motion.div
+          animate={ activeTab === 'home' ? 'fadeIn' : 'fadeOut' }
+          variants={animateTabHeader}
+          transition={{ duration: 0.2 }}
           className={`${styles.homeHeader} ${styles.tabHeader}`}
           onClick={() => setActiveTab('home')}
           style={homeHeaderStyles}
         >
           <span>home</span>
         </motion.div>
-        <div
+        <motion.div
+          animate={ activeTab === 'about' ? 'fadeColorIn' : 'fadeColorOut' }
+          variants={animateTabHeader}
+          transition={{ duration: 0.2 }}
           className={`${styles.aboutHeader} ${styles.tabHeader}`}
           onClick={() => setActiveTab('about')}
           style={aboutHeaderStyles}
         >
           <span>about me</span>
-        </div>
-        <div
+        </motion.div>
+        <motion.div
+          animate={ activeTab === 'contact' ? 'fadeColorIn' : 'fadeColorOut' }
+          variants={animateTabHeader}
+          transition={{ duration: 0.2 }}
           className={`${styles.contactHeader} ${styles.tabHeader}`}
           onClick={() => setActiveTab('contact')}
           style={contactHeaderStyles}
         >
           <span>contact</span>
-        </div>
+        </motion.div>
       </div>
-      <div className={styles.tabsContainer}>
-        <div className={`${styles.homeBody} ${styles.tabBody}`} style={homeBodyStyles}>
-          <motion.p
-            animate={ activeTab === 'home' ? 'fadeIn' : 'fadeOut'}
-            variants={animationVar}
-            transition={{ duration: 0.2 }}
-            className={styles.bodyText}
-          >
-            we&apos;re home baybee
-          </motion.p>
-        </div>
-        <div
-          className={`${styles.aboutBody} ${styles.tabBody}`}
-          style={aboutBodyStyles}
+
+      { /* TAB BODIES */ }
+      <div
+        className={`${styles.homeBody} ${styles.tabBody}`}
+        style={homeBodyStyles}
+      >
+        <motion.p
+          animate={ activeTab === 'home' ? 'fadeIn' : 'fadeOut'}
+          variants={animateBodyText}
+          transition={{ duration: 0.2 }}
+          className={styles.bodyText}
         >
-          <motion.img
-            animate={ activeTab === 'about' ? 'fadeIn' : 'fadeOut'}
-            variants={animationVar}
-            transition={{ duration: 0.2 }}
-            src='../yari.jpeg'
-            height={250}
-            width={200}
-            className={styles.aboutImage}
-          />
-          <motion.p
-            animate={ activeTab === 'about' ? 'fadeIn' : 'fadeOut'}
-            variants={animationVar}
-            transition={{ duration: 0.2 }}
-            className={styles.bodyText}
-          >
-            All that separates us is an imagined distance.
+          we&apos;re home baybee
+        </motion.p>
+      </div>
+      <div
+        className={`${styles.aboutBody} ${styles.tabBody}`}
+        style={aboutBodyStyles}
+      >
+        <motion.img
+          animate={ activeTab === 'about' ? 'fadeIn' : 'fadeOut'}
+          variants={animateBodyText}
+          transition={{ duration: 0.2 }}
+          src='../yari.jpeg'
+          height={250}
+          width={200}
+          className={styles.aboutImage}
+        />
+        <motion.p
+          animate={ activeTab === 'about' ? 'fadeIn' : 'fadeOut'}
+          variants={animateBodyText}
+          transition={{ duration: 0.2 }}
+          className={styles.bodyText}
+        >
+          All that separates us is an imagined distance.
 
-            Strangers.
+          Strangers.
 
-            I wonder if you look at me and see a future where we are happy together.
+          I wonder if you look at me and see a future where we are happy together.
 
-            Lives intertwined. In love.
+          Lives intertwined. In love.
 
-            And yet, here we are.
-            You&apos;re seated next to a window,
-            Head held up by your left hand,
-            Eyes scanning a quiet sidewalk.
+          And yet, here we are.
+          You&apos;re seated next to a window,
+          Head held up by your left hand,
+          Eyes scanning a quiet sidewalk.
 
-            I sit with my back to the corner,
-            Furthest from the entrance.
+          I sit with my back to the corner,
+          Furthest from the entrance.
 
-            I&apos;m curious to know if you catch me stealing glances at you.
-            If you steal glances at me.
-            If you think of me at all.
+          I&apos;m curious to know if you catch me stealing glances at you.
+          If you steal glances at me.
+          If you think of me at all.
 
-            We could be perfect together, you know.
-            We could know each other better than anyone.
+          We could be perfect together, you know.
+          We could know each other better than anyone.
 
-            Share everything.
-            Live and die together.
+          Share everything.
+          Live and die together.
 
-            I know I&apos;m being foolish, so,
-            I leave our life behind when I get up.
-          </motion.p>
-        </div>
-        <div className={`${styles.contactBody} ${styles.tabBody}`} style={contactBodyStyles}>
-          <motion.p
-            animate={ activeTab === 'contact' ? 'fadeIn' : 'fadeOut'}
-            variants={animationVar}
-            transition={{ duration: 0.2 }}
-            className={styles.bodyText}
-          >
-            contact me!
-          </motion.p>
-        </div>
+          I know I&apos;m being foolish, so,
+          I leave our life behind when I get up.
+        </motion.p>
+      </div>
+      <div className={`${styles.contactBody} ${styles.tabBody}`} style={contactBodyStyles}>
+        <motion.p
+          animate={ activeTab === 'contact' ? 'fadeIn' : 'fadeOut'}
+          variants={animateBodyText}
+          transition={{ duration: 0.2 }}
+          className={styles.bodyText}
+        >
+          contact me!
+        </motion.p>
       </div>
     </div>
   )
