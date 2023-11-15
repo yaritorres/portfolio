@@ -14,20 +14,20 @@
 }
 
 .tabHeader {
+  border: #EDF4ED solid 2px;
+  border-bottom: none;
+  color: #EDF4ED;
   height: 7vh;
   width: 8vw;
-}
-
-.homeHeader {
-  border: black solid 2px;
-  border-bottom: none;
-  border-radius: 10px 10px 0px 0px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: 'Atkins Hyperlegible', sans-serif;
   font-size: 20px;
-  background-color: '#C8ADC0';
+}
+
+.homeHeader {
+  border-radius: 10px 10px 0px 0px;
 }
 
 .homeBody {
@@ -37,16 +37,9 @@
 }
 
 .aboutHeader {
-  border: black solid 2px;
-  border-bottom: none;
   border-left: transparent;
   border-right: transparent;
   border-radius: 10px 10px 0px 0px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: 'Atkins Hyperlegible', sans-serif;
-  font-size: 20px;
 }
 
 .aboutImage {
@@ -56,14 +49,7 @@
 }
 
 .contactHeader {
-  border: black solid 2px;
-  border-bottom: none;
   border-radius: 10px 10px 0px 0px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: 'Atkins Hyperlegible', sans-serif;
-  font-size: 20px;
 }
 
 .contactBody {
@@ -83,9 +69,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: black solid 2px;
+  border: #EDF4ED solid 2px;
   border-top: none;
   border-radius: 0px 10px 10px 10px;
+  background-color: #79B791;
+  color: #EDF4ED;
   height: 60vh;
   width: 36vw;
   padding: 2%;

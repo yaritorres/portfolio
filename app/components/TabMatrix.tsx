@@ -7,27 +7,21 @@ export default function TabMatrix() {
   const [activeTab, setActiveTab] = useState('home');
   const homeBodyStyles = {
     display: activeTab === 'home' ? 'flex' : 'none',
-    backgroundColor: activeTab === 'home' ? '#7765E3' : '#C8ADC0',
   }
   const homeHeaderStyles = {
     borderBottom: activeTab === 'home' ? 'none' : 'black solid 2px',
-    backgroundColor: activeTab === 'home' ? '#7765E3' : '#C8ADC0',
   }
   const aboutBodyStyles = {
     display: activeTab === 'about' ? 'block' : 'none',
-    backgroundColor: activeTab === 'about' ? '#7765E3' : '#C8ADC0',
   }
   const aboutHeaderStyles = {
     borderBottom: activeTab === 'about' ? 'none' : 'black solid 2px',
-    backgroundColor: activeTab === 'about' ? '#7765E3' : '#C8ADC0',
   }
   const contactBodyStyles = {
     display: activeTab === 'contact' ? 'flex' : 'none',
-    backgroundColor: activeTab === 'contact' ? '#7765E3' : '#C8ADC0',
   }
   const contactHeaderStyles = {
     borderBottom: activeTab === 'contact' ? 'none' : 'black solid 2px',
-    backgroundColor: activeTab === 'contact' ? '#7765E3' : '#C8ADC0',
   }
 
   const animateBodyText = {
@@ -36,8 +30,8 @@ export default function TabMatrix() {
   }
 
   const animateTabHeader = {
-    fadeColorIn: { backgroundColor: '#7765E3' },
-    fadeColorOut: { backgroundColor: '#C8ADC0' }
+    fadeColorIn: { backgroundColor: '#79B791', borderBottom: 'transparent' },
+    fadeColorOut: { backgroundColor: '#ABD1B5', borderBottom: 'solid 2px #EDF4ED' }
   }
 
   return (
@@ -45,7 +39,7 @@ export default function TabMatrix() {
       { /* HEADERS */ }
       <div className={styles.headerContainer}>
         <motion.div
-          animate={ activeTab === 'home' ? 'fadeIn' : 'fadeOut' }
+          animate={ activeTab === 'home' ? 'fadeColorIn' : 'fadeColorOut' }
           variants={animateTabHeader}
           transition={{ duration: 0.2 }}
           className={`${styles.homeHeader} ${styles.tabHeader}`}
