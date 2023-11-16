@@ -4,7 +4,7 @@ export default function Navbar() {
   return (
     <div className={styles.navbar}>
       <div className={styles.nameContainer}>
-        <p>yari</p> <p>torres</p> <p>nicola</p>
+        <p>yari torres nicola</p>
       </div>
     </div>
   )

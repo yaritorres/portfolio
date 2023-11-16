@@ -30,8 +30,8 @@ export default function TabMatrix() {
   }
 
   const animateTabHeader = {
-    fadeColorIn: { backgroundColor: '#79B791', borderBottom: 'transparent' },
-    fadeColorOut: { backgroundColor: '#ABD1B5', borderBottom: 'solid 2px #EDF4ED' }
+    fadeColorIn: { backgroundColor: '#439775', borderBottom: 'transparent' },
+    fadeColorOut: { backgroundColor: '#485665', borderBottom: 'solid 2px #EDF4ED' }
   }
 
   return (
@@ -75,14 +75,30 @@ export default function TabMatrix() {
         className={`${styles.homeBody} ${styles.tabBody}`}
         style={homeBodyStyles}
       >
-        <motion.p
-          animate={ activeTab === 'home' ? 'fadeIn' : 'fadeOut'}
-          variants={animateBodyText}
-          transition={{ duration: 0.2 }}
-          className={styles.bodyText}
-        >
-          we&apos;re home baybee
-        </motion.p>
+        <div className={styles.bodyText}>
+          <motion.p
+            animate={ activeTab === 'home' ? 'fadeIn' : 'fadeOut'}
+            variants={animateBodyText}
+            transition={{ duration: 0.2 }}
+            className={styles.homeFirstLine}
+          >
+            Welcome to my portfolio. It&apos;s a simple page meant to be an intro to me and what I do.
+          </motion.p>
+          <motion.p
+            animate={ activeTab === 'home' ? 'fadeIn' : 'fadeOut'}
+            variants={animateBodyText}
+            transition={{ duration: 0.2 }}
+            className={styles.homeSecondLine}>
+            If you want to learn more about me as a person, click the ABOUT tab.
+          </motion.p>
+          <motion.p
+            animate={ activeTab === 'home' ? 'fadeIn' : 'fadeOut'}
+            variants={animateBodyText}
+            transition={{ duration: 0.2 }}
+            className={styles.homeText}>
+            Feel free to contact me any time and reach out to me through the CONTACT tab. I am currently open to new opportunities!
+          </motion.p>
+        </div>
       </div>
       <div
         className={`${styles.aboutBody} ${styles.tabBody}`}

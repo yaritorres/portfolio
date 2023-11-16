@@ -32,8 +32,17 @@
 
 .homeBody {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.homeFirstLine {
+  margin-bottom: 10px;
+}
+
+.homeSecondLine {
+  margin-bottom: 10px;
 }
 
 .aboutHeader {
@@ -45,7 +54,7 @@
 .aboutImage {
   float: left;
   margin: 2%;
-  border: black solid 2px;
+  border: #EDF4ED solid 2px;
 }
 
 .contactHeader {
@@ -72,7 +81,7 @@
   border: #EDF4ED solid 2px;
   border-top: none;
   border-radius: 0px 10px 10px 10px;
-  background-color: #79B791;
+  background-color: #439775;
   color: #EDF4ED;
   height: 60vh;
   width: 36vw;
