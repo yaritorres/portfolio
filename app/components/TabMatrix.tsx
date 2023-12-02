@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 'use client'
 import styles from '../styles/tabMatrix.module.css';
 import { useState } from 'react';
@@ -71,16 +72,13 @@ export default function TabMatrix() {
       </div>
 
       { /* TAB BODIES */ }
-      <div
-        className={`${styles.homeBody} ${styles.tabBody}`}
-        style={homeBodyStyles}
-      >
+      <div className={`${styles.homeBody} ${styles.tabBody}`} style={homeBodyStyles}>
         <div className={styles.bodyText}>
           <motion.p
             animate={ activeTab === 'home' ? 'fadeIn' : 'fadeOut'}
             variants={animateBodyText}
             transition={{ duration: 0.2 }}
-            className={styles.homeFirstLine}
+            className={styles.homeTextWithMargin}
           >
             Welcome to my portfolio. It&apos;s a simple page meant to be an intro to me and what I do.
           </motion.p>
@@ -88,7 +86,7 @@ export default function TabMatrix() {
             animate={ activeTab === 'home' ? 'fadeIn' : 'fadeOut'}
             variants={animateBodyText}
             transition={{ duration: 0.2 }}
-            className={styles.homeSecondLine}>
+            className={styles.homeTextWithMargin}>
             If you want to learn more about me as a person, click the ABOUT tab.
           </motion.p>
           <motion.p
@@ -96,14 +94,11 @@ export default function TabMatrix() {
             variants={animateBodyText}
             transition={{ duration: 0.2 }}
             className={styles.homeText}>
-            Feel free to contact me any time and reach out to me through the CONTACT tab. I am currently open to new opportunities!
+            Feel free to reach out to me through the CONTACT tab.
           </motion.p>
         </div>
       </div>
-      <div
-        className={`${styles.aboutBody} ${styles.tabBody}`}
-        style={aboutBodyStyles}
-      >
+      <div className={`${styles.aboutBody} ${styles.tabBody}`} style={aboutBodyStyles}>
         <motion.img
           animate={ activeTab === 'about' ? 'fadeIn' : 'fadeOut'}
           variants={animateBodyText}
@@ -150,14 +145,58 @@ export default function TabMatrix() {
         </motion.p>
       </div>
       <div className={`${styles.contactBody} ${styles.tabBody}`} style={contactBodyStyles}>
-        <motion.p
-          animate={ activeTab === 'contact' ? 'fadeIn' : 'fadeOut'}
-          variants={animateBodyText}
-          transition={{ duration: 0.2 }}
-          className={styles.bodyText}
-        >
-          contact me!
-        </motion.p>
+        <p className={`${styles.bodyText} ${styles.contactBodyText}`}>
+          <motion.p
+            animate={ activeTab === 'contact' ? 'fadeIn' : 'fadeOut'}
+            variants={animateBodyText}
+            transition={{ duration: 0.2 }}
+            className={styles.contactText}
+          >
+            currently seeking a new opportunity!
+          </motion.p>
+          <motion.p
+            animate={ activeTab === 'contact' ? 'fadeIn' : 'fadeOut'}
+            variants={animateBodyText}
+            transition={{ duration: 0.2 }}
+            className={styles.contactText}
+          >
+            click any of the logos below to see my work or send me a message.
+          </motion.p>
+        </p>
+        <div className={styles.logosContainer}>
+          <a href='https://linkedin.com/in/yaritorresnicola' target='_blank' rel='noreferrer'>
+            <motion.img
+              animate={ activeTab === 'contact' ? 'fadeIn' : 'fadeOut'}
+              variants={animateBodyText}
+              transition={{ duration: 0.2 }}
+              src='../linkedin-logo.png'
+              alt='LinkedIn Logo'
+              height={110}
+              width={110}
+            />
+          </a>
+          <a href='https://github.com/yaritorres' target='_blank' rel='noreferrer' style={{margin: '0px 20px 0px 20px'}}>
+            <motion.img
+              animate={ activeTab === 'contact' ? 'fadeIn' : 'fadeOut'}
+              variants={animateBodyText}
+              transition={{ duration: 0.2 }}
+              src='../github logo.png'
+              alt='Github Logo'
+              height={110}
+              width={110}
+            />
+          </a>
+          <a href='mailto:ybtorres9@gmail.com?subject=Awesome New Opportunity'>
+            <motion.img
+              animate={ activeTab === 'contact' ? 'fadeIn' : 'fadeOut'}
+              variants={animateBodyText}
+              transition={{ duration: 0.2 }}
+              src='../gmail-icon.png'
+              alt='Gmail Logo'
+              height={110}
+              width={110} />
+          </a>
+        </div>
       </div>
     </div>
   )
