@@ -16,6 +16,7 @@
 .tabHeader {
   border: #EDF4ED solid 2px;
   border-bottom: none;
+  border-radius: 10px 10px 0px 0px;
   color: #EDF4ED;
   height: 7vh;
   width: 8vw;
@@ -28,10 +29,6 @@
 
 .tabHeader:hover {
   cursor: pointer;
-}
-
-.homeHeader {
-  border-radius: 10px 10px 0px 0px;
 }
 
 .homeBody {
@@ -49,7 +46,6 @@
 .aboutHeader {
   border-left: transparent;
   border-right: transparent;
-  border-radius: 10px 10px 0px 0px;
 }
 
 .aboutImage {
@@ -59,7 +55,7 @@
 }
 
 .contactHeader {
-  border-radius: 10px 10px 0px 0px;
+  border-right: transparent;
 }
 
 .contactBody {

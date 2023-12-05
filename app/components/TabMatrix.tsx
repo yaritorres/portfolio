@@ -3,26 +3,25 @@
 import styles from '../styles/tabMatrix.module.css';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import ContactBody from './Tab Bodies/Contact';
+import AboutBody from './Tab Bodies/About';
+import HomeBody from './Tab Bodies/Home';
+import ProjectsBody from './Tab Bodies/Projects';
+import { act } from 'react-dom/test-utils';
 
 export default function TabMatrix() {
   const [activeTab, setActiveTab] = useState('home');
-  const homeBodyStyles = {
-    display: activeTab === 'home' ? 'flex' : 'none',
-  }
   const homeHeaderStyles = {
     borderBottom: activeTab === 'home' ? 'none' : 'black solid 2px',
-  }
-  const aboutBodyStyles = {
-    display: activeTab === 'about' ? 'block' : 'none',
   }
   const aboutHeaderStyles = {
     borderBottom: activeTab === 'about' ? 'none' : 'black solid 2px',
   }
-  const contactBodyStyles = {
-    display: activeTab === 'contact' ? 'flex' : 'none',
-  }
   const contactHeaderStyles = {
     borderBottom: activeTab === 'contact' ? 'none' : 'black solid 2px',
+  }
+  const projectsHeaderStyles = {
+    borderBottom: activeTab === 'projects' ? 'none' : 'black solid 2px',
   }
 
   const animateBodyText = {
@@ -69,135 +68,24 @@ export default function TabMatrix() {
         >
           <span>contact</span>
         </motion.div>
+        <motion.div
+          animate={ activeTab === 'projects' ? 'fadeColorIn' : 'fadeColorOut' }
+          variants={animateTabHeader}
+          transition={{ duration: 0.2 }}
+          className={`${styles.projectsHeader} ${styles.tabHeader}`}
+          onClick={() => setActiveTab('projects')}
+          style={projectsHeaderStyles}
+        >
+          <span>projects</span>
+        </motion.div>
       </div>
 
       { /* TAB BODIES */ }
-      <div className={`${styles.homeBody} ${styles.tabBody}`} style={homeBodyStyles}>
-        <div className={styles.bodyText}>
-          <motion.p
-            animate={ activeTab === 'home' ? 'fadeIn' : 'fadeOut'}
-            variants={animateBodyText}
-            transition={{ duration: 0.2 }}
-            className={styles.homeTextWithMargin}
-          >
-            Welcome to my portfolio. It&apos;s a simple page meant to be an intro to me and what I do.
-          </motion.p>
-          <motion.p
-            animate={ activeTab === 'home' ? 'fadeIn' : 'fadeOut'}
-            variants={animateBodyText}
-            transition={{ duration: 0.2 }}
-            className={styles.homeTextWithMargin}>
-            If you want to learn more about me as a person, click the ABOUT tab.
-          </motion.p>
-          <motion.p
-            animate={ activeTab === 'home' ? 'fadeIn' : 'fadeOut'}
-            variants={animateBodyText}
-            transition={{ duration: 0.2 }}
-            className={styles.homeText}>
-            Feel free to reach out to me through the CONTACT tab.
-          </motion.p>
-        </div>
-      </div>
-      <div className={`${styles.aboutBody} ${styles.tabBody}`} style={aboutBodyStyles}>
-        <motion.img
-          animate={ activeTab === 'about' ? 'fadeIn' : 'fadeOut'}
-          variants={animateBodyText}
-          transition={{ duration: 0.2 }}
-          src='../yari.jpeg'
-          height={250}
-          width={200}
-          className={styles.aboutImage}
-        />
-        <motion.p
-          animate={ activeTab === 'about' ? 'fadeIn' : 'fadeOut'}
-          variants={animateBodyText}
-          transition={{ duration: 0.2 }}
-          className={styles.bodyText}
-        >
-          All that separates us is an imagined distance.
 
-          Strangers.
-
-          I wonder if you look at me and see a future where we are happy together.
-
-          Lives intertwined. In love.
-
-          And yet, here we are.
-          You&apos;re seated next to a window,
-          Head held up by your left hand,
-          Eyes scanning a quiet sidewalk.
-
-          I sit with my back to the corner,
-          Furthest from the entrance.
-
-          I&apos;m curious to know if you catch me stealing glances at you.
-          If you steal glances at me.
-          If you think of me at all.
-
-          We could be perfect together, you know.
-          We could know each other better than anyone.
-
-          Share everything.
-          Live and die together.
-
-          I know I&apos;m being foolish, so,
-          I leave our life behind when I get up.
-        </motion.p>
-      </div>
-      <div className={`${styles.contactBody} ${styles.tabBody}`} style={contactBodyStyles}>
-        <p className={`${styles.bodyText} ${styles.contactBodyText}`}>
-          <motion.p
-            animate={ activeTab === 'contact' ? 'fadeIn' : 'fadeOut'}
-            variants={animateBodyText}
-            transition={{ duration: 0.2 }}
-            className={styles.contactText}
-          >
-            currently seeking a new opportunity!
-          </motion.p>
-          <motion.p
-            animate={ activeTab === 'contact' ? 'fadeIn' : 'fadeOut'}
-            variants={animateBodyText}
-            transition={{ duration: 0.2 }}
-            className={styles.contactText}
-          >
-            click any of the logos below to see my work or send me a message.
-          </motion.p>
-        </p>
-        <div className={styles.logosContainer}>
-          <a href='https://linkedin.com/in/yaritorresnicola' target='_blank' rel='noreferrer'>
-            <motion.img
-              animate={ activeTab === 'contact' ? 'fadeIn' : 'fadeOut'}
-              variants={animateBodyText}
-              transition={{ duration: 0.2 }}
-              src='../linkedin-logo.png'
-              alt='LinkedIn Logo'
-              height={110}
-              width={110}
-            />
-          </a>
-          <a href='https://github.com/yaritorres' target='_blank' rel='noreferrer' style={{margin: '0px 20px 0px 20px'}}>
-            <motion.img
-              animate={ activeTab === 'contact' ? 'fadeIn' : 'fadeOut'}
-              variants={animateBodyText}
-              transition={{ duration: 0.2 }}
-              src='../github logo.png'
-              alt='Github Logo'
-              height={110}
-              width={110}
-            />
-          </a>
-          <a href='mailto:ybtorres9@gmail.com?subject=Awesome New Opportunity'>
-            <motion.img
-              animate={ activeTab === 'contact' ? 'fadeIn' : 'fadeOut'}
-              variants={animateBodyText}
-              transition={{ duration: 0.2 }}
-              src='../gmail-icon.png'
-              alt='Gmail Logo'
-              height={110}
-              width={110} />
-          </a>
-        </div>
-      </div>
+      <HomeBody activeTab={activeTab} animateBodyText={animateBodyText} />
+      <AboutBody activeTab={activeTab} animateBodyText={animateBodyText} />
+      <ContactBody activeTab={activeTab} animateBodyText={animateBodyText} />
+      <ProjectsBody activeTab={activeTab} animateBodyText={animateBodyText} />
     </div>
   )
 }
