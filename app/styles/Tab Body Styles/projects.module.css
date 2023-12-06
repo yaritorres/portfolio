@@ -1,0 +1,15 @@
+.labeledImageContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Atkins Hyperlegible', sans-serif;
+}
+
+.labeledImageContainer:hover {
+  cursor: pointer;
+}
+
+.projectImage {
+  border: #EDF4ED solid 2px;
+}

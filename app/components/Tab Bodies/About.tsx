@@ -36,7 +36,7 @@ export default function AboutBody({ activeTab, animateBodyText }) {
 
         I have lots of hobbies, like playing video games, drawing, playing the guitar, and soccer!
 
-        Currently I reside in Florida, but I&apos;d definitely like to move out and see more of the country!
+        I currently reside in Florida, but I&apos;d definitely like to move out and see more of the country!
 
         If you have any more questions about me, feel free to contact me via email or LinkedIn!
       </motion.p>
