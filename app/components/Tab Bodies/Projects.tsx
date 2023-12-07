@@ -2,13 +2,13 @@ import styles from '../../styles/tabMatrix.module.css';
 import projectStyles from '../../styles/Tab Body Styles/projects.module.css';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
-import Modal from 'react-bootstrap/Modal';
+import DuguidModal from './ProjectsTabModals/Duguid';
 
 export default function ProjectsBody({ activeTab, animateBodyText }) {
   const projectsBodyStyles = {
     display: activeTab === 'projects' ? 'flex' : 'none',
   }
-  const [show, setShow] = useState('hide');
+  const [duguidShow, setDuguidShow] = useState(false);
 
   return (
     <div className={`${styles.projectsBody} ${styles.tabBody}`} style={projectsBodyStyles}>
@@ -25,7 +25,7 @@ export default function ProjectsBody({ activeTab, animateBodyText }) {
           />
           <label> royale </label>
         </div>
-        <div className={projectStyles.labeledImageContainer}>
+        <div className={projectStyles.labeledImageContainer} onClick={() => { setDuguidShow(true) }}>
           <motion.img
             animate={ activeTab === 'projects' ? 'fadeIn' : 'fadeOut'}
             variants={animateBodyText}
@@ -37,6 +37,7 @@ export default function ProjectsBody({ activeTab, animateBodyText }) {
           />
           <label> duguid construction </label>
         </div>
+        <DuguidModal duguidShow={duguidShow} setDuguidShow={setDuguidShow} />
         <div className={projectStyles.labeledImageContainer}>
           <motion.img
             animate={ activeTab === 'projects' ? 'fadeIn' : 'fadeOut'}
