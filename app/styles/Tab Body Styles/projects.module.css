@@ -4,6 +4,7 @@
   justify-content: center;
   align-items: center;
   font-family: 'Atkins Hyperlegible', sans-serif;
+  font-size: 25px;
 }
 
 .labeledImageContainer:hover {
@@ -12,4 +13,13 @@
 
 .projectImage {
   border: #EDF4ED solid 2px;
+}
+
+.descriptionContainer {
+  overflow-y: scroll !important;
+  max-height: 200px !important;
+}
+
+.duguidDescription {
+  margin-bottom: 10px;
 }

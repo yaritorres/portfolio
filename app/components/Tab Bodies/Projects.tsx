@@ -2,7 +2,7 @@ import styles from '../../styles/tabMatrix.module.css';
 import projectStyles from '../../styles/Tab Body Styles/projects.module.css';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
-import DuguidModal from './ProjectsTabModals/Duguid';
+import DuguidModal from './ProjectsTabModals/DuguidModal';
 
 export default function ProjectsBody({ activeTab, animateBodyText }) {
   const projectsBodyStyles = {
@@ -23,7 +23,13 @@ export default function ProjectsBody({ activeTab, animateBodyText }) {
             height={200}
             width={250}
           />
-          <label> royale </label>
+          <motion.label
+            animate={ activeTab === 'projects' ? 'fadeIn' : 'fadeOut'}
+            variants={animateBodyText}
+            transition={{ duration: 0.2 }}
+          >
+            royale
+          </motion.label>
         </div>
         <div className={projectStyles.labeledImageContainer} onClick={() => { setDuguidShow(true) }}>
           <motion.img
@@ -35,7 +41,13 @@ export default function ProjectsBody({ activeTab, animateBodyText }) {
             height={200}
             width={250}
           />
-          <label> duguid construction </label>
+          <motion.label
+            animate={ activeTab === 'projects' ? 'fadeIn' : 'fadeOut'}
+            variants={animateBodyText}
+            transition={{ duration: 0.2 }}
+          >
+            duguid construction
+          </motion.label>
         </div>
         <DuguidModal duguidShow={duguidShow} setDuguidShow={setDuguidShow} />
         <div className={projectStyles.labeledImageContainer}>
@@ -48,7 +60,13 @@ export default function ProjectsBody({ activeTab, animateBodyText }) {
             height={200}
             width={250}
           />
-          <label> atelier </label>
+          <motion.label
+            animate={ activeTab === 'projects' ? 'fadeIn' : 'fadeOut'}
+            variants={animateBodyText}
+            transition={{ duration: 0.2 }}
+          >
+            atelier
+          </motion.label>
         </div>
       </div>
     </div>
