@@ -1,6 +1,6 @@
 .matrixContainer {
   min-width: 100%;
-  min-height: 90vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -37,6 +37,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+  background-color: #20A39E;
 }
 
 .homeTextWithMargin {
@@ -46,6 +47,10 @@
 .aboutHeader {
   border-left: transparent;
   border-right: transparent;
+}
+
+.aboutBody {
+  background-color: #EF5B5B;
 }
 
 .aboutImage {
@@ -63,6 +68,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: #F78735;
 }
 
 .contactBodyText {
@@ -76,6 +82,10 @@
 .contactText {
   text-align: center;
   margin-bottom: 10px;
+}
+
+.projectsBody {
+  background-color: #FFB30F;
 }
 
 .logosContainer {
@@ -108,7 +118,6 @@
   border: #EDF4ED solid 2px;
   border-top: none;
   border-radius: 0px 10px 10px 10px;
-  background-color: #439775;
   color: #EDF4ED;
   height: 60vh;
   width: 36vw;

@@ -3,16 +3,16 @@ import styles from '../../../styles/Tab Body Styles/projects.module.css';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 
-export default function DuguidModal({ duguidShow, setDuguidShow }) {
+export default function AtelierModal({ atelierShow, setAtelierShow }) {
   return (
-    <Modal show={duguidShow} onHide={() => { setDuguidShow(false) }} size='lg' centered>
+    <Modal show={atelierShow} onHide={() => { setAtelierShow(false) }} size='lg' centered>
       <Modal.Header>
-        <Modal.Title>Duguid Construction</Modal.Title>
+        <Modal.Title>Project Atelier</Modal.Title>
       </Modal.Header>
       <Modal.Body>
         <img
-          src='../../../duguid.gif'
-          alt='gif of one of my projects'
+          src='../../../loaderio_testing.png'
+          alt='png of one of my projects'
           height={400}
           width={765}
         />
@@ -47,7 +47,7 @@ export default function DuguidModal({ duguidShow, setDuguidShow }) {
         </div>
       </Modal.Body>
       <Modal.Footer>
-        <Button variant="secondary" onClick={() => { setDuguidShow(false) }}>
+        <Button variant="secondary" onClick={() => { setAtelierShow(false) }}>
           Close
         </Button>
       </Modal.Footer>

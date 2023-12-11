@@ -29,9 +29,24 @@ export default function TabMatrix() {
     fadeOut: { y: 50, opacity: 0 }
   }
 
-  const animateTabHeader = {
-    fadeColorIn: { backgroundColor: '#439775', borderBottom: 'transparent' },
-    fadeColorOut: { backgroundColor: '#485665', borderBottom: 'solid 2px #EDF4ED' }
+  const animateHomeHeader = {
+    fadeColorIn: { backgroundColor: '#20A39E', borderBottom: 'transparent' },
+    fadeColorOut: { backgroundColor: '#20A39E', borderBottom: 'solid 2px #EDF4ED' }
+  }
+
+  const animateAboutHeader = {
+    fadeColorIn: { backgroundColor: '#EF5B5B', borderBottom: 'transparent' },
+    fadeColorOut: { backgroundColor: '#EF5B5B', borderBottom: 'solid 2px #EDF4ED' }
+  }
+
+  const animateContactHeader = {
+    fadeColorIn: { backgroundColor: '#F78735', borderBottom: 'transparent' },
+    fadeColorOut: { backgroundColor: '#F78735', borderBottom: 'solid 2px #EDF4ED' }
+  }
+
+  const animateProjectsHeader = {
+    fadeColorIn: { backgroundColor: '#FFB30F', borderBottom: 'transparent' },
+    fadeColorOut: { backgroundColor: '#FFB30F', borderBottom: 'solid 2px #EDF4ED' }
   }
 
   return (
@@ -40,7 +55,7 @@ export default function TabMatrix() {
       <div className={styles.headerContainer}>
         <motion.div
           animate={ activeTab === 'home' ? 'fadeColorIn' : 'fadeColorOut' }
-          variants={animateTabHeader}
+          variants={animateHomeHeader}
           transition={{ duration: 0.2 }}
           className={`${styles.homeHeader} ${styles.tabHeader}`}
           onClick={() => setActiveTab('home')}
@@ -50,7 +65,7 @@ export default function TabMatrix() {
         </motion.div>
         <motion.div
           animate={ activeTab === 'about' ? 'fadeColorIn' : 'fadeColorOut' }
-          variants={animateTabHeader}
+          variants={animateAboutHeader}
           transition={{ duration: 0.2 }}
           className={`${styles.aboutHeader} ${styles.tabHeader}`}
           onClick={() => setActiveTab('about')}
@@ -60,7 +75,7 @@ export default function TabMatrix() {
         </motion.div>
         <motion.div
           animate={ activeTab === 'contact' ? 'fadeColorIn' : 'fadeColorOut' }
-          variants={animateTabHeader}
+          variants={animateContactHeader}
           transition={{ duration: 0.2 }}
           className={`${styles.contactHeader} ${styles.tabHeader}`}
           onClick={() => setActiveTab('contact')}
@@ -70,7 +85,7 @@ export default function TabMatrix() {
         </motion.div>
         <motion.div
           animate={ activeTab === 'projects' ? 'fadeColorIn' : 'fadeColorOut' }
-          variants={animateTabHeader}
+          variants={animateProjectsHeader}
           transition={{ duration: 0.2 }}
           className={`${styles.projectsHeader} ${styles.tabHeader}`}
           onClick={() => setActiveTab('projects')}

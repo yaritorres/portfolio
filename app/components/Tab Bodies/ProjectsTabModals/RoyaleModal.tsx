@@ -3,15 +3,15 @@ import styles from '../../../styles/Tab Body Styles/projects.module.css';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 
-export default function DuguidModal({ duguidShow, setDuguidShow }) {
+export default function RoyaleModal({ royaleShow, setRoyaleShow }) {
   return (
-    <Modal show={duguidShow} onHide={() => { setDuguidShow(false) }} size='lg' centered>
+    <Modal show={royaleShow} onHide={() => { setRoyaleShow(false) }} size='lg' centered>
       <Modal.Header>
-        <Modal.Title>Duguid Construction</Modal.Title>
+        <Modal.Title>Royale Clothing</Modal.Title>
       </Modal.Header>
       <Modal.Body>
         <img
-          src='../../../duguid.gif'
+          src='../../../royalepage.gif'
           alt='gif of one of my projects'
           height={400}
           width={765}
@@ -47,7 +47,7 @@ export default function DuguidModal({ duguidShow, setDuguidShow }) {
         </div>
       </Modal.Body>
       <Modal.Footer>
-        <Button variant="secondary" onClick={() => { setDuguidShow(false) }}>
+        <Button variant="secondary" onClick={() => { setRoyaleShow(false) }}>
           Close
         </Button>
       </Modal.Footer>
