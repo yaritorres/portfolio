@@ -18,7 +18,7 @@ export default function RoyaleModal({ royaleShow, setRoyaleShow }) {
         />
         <div className={styles.descriptionContainer}>
           <p className={styles.duguidDescription}>
-            This was a project I worked on alongside 5 other incredible software engineers.
+            This was a project I developed with 2 other software engineers.
           </p>
 
           <p className={styles.duguidDescription}>

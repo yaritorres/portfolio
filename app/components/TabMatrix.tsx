@@ -7,7 +7,6 @@ import ContactBody from './Tab Bodies/Contact';
 import AboutBody from './Tab Bodies/About';
 import HomeBody from './Tab Bodies/Home';
 import ProjectsBody from './Tab Bodies/Projects';
-import { act } from 'react-dom/test-utils';
 
 export default function TabMatrix() {
   const [activeTab, setActiveTab] = useState('home');
@@ -51,7 +50,9 @@ export default function TabMatrix() {
 
   return (
     <div className={styles.matrixContainer}>
+
       { /* HEADERS */ }
+
       <div className={styles.headerContainer}>
         <motion.div
           animate={ activeTab === 'home' ? 'fadeColorIn' : 'fadeColorOut' }
@@ -101,6 +102,7 @@ export default function TabMatrix() {
       <AboutBody activeTab={activeTab} animateBodyText={animateBodyText} />
       <ContactBody activeTab={activeTab} animateBodyText={animateBodyText} />
       <ProjectsBody activeTab={activeTab} animateBodyText={animateBodyText} />
+      <div className={`${styles.borderFix}`}></div>
     </div>
   )
 }

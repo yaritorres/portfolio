@@ -11,6 +11,8 @@
   padding: 10px;
 }
 
-.lightMode {
-  color: #EDF4ED;
+.nightMode {
+  position: absolute;
+  right: 35px;
+  top: 35px;
 }

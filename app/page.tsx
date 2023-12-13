@@ -27,7 +27,7 @@ export default function Home() {
         <img
           onClick={() => { setMode('light') }}
           style={nightModeStyles}
-          className={styles.lightMode}
+          className={styles.nightMode}
           src='../night-mode.png'
           alt='night mode symbol'
           width={50}

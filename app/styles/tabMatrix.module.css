@@ -116,10 +116,21 @@
   align-items: center;
   justify-content: center;
   border: #EDF4ED solid 2px;
-  border-top: none;
+  border-top: transparent;
   border-radius: 0px 10px 10px 10px;
   color: #EDF4ED;
   height: 60vh;
   width: 36vw;
   padding: 2%;
+}
+
+.borderFix {
+  position: absolute;
+  width: 4.1vw;
+  height: 7vh;
+  border-top: #EDF4ED 2px solid;
+  border-right: transparent 2px solid;
+  border-radius: 0px 10px 0px 0px;
+  right: 31.9vw;
+  top: 23.26vh;
 }
