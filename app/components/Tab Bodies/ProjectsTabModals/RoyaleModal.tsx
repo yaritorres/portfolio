@@ -18,31 +18,21 @@ export default function RoyaleModal({ royaleShow, setRoyaleShow }) {
         />
         <div className={styles.descriptionContainer}>
           <p className={styles.duguidDescription}>
-            This was a project I developed with 2 other software engineers.
+            For this project me and 2 other amazing engineers were tasked with designing a front-end for an online clothing company.
+            We had a list of basic requirements to fulfill in terms of functionality but had ultimate creative freedom relative to
+            the visual aspect of the platform.
           </p>
 
           <p className={styles.duguidDescription}>
-            For this project, were assigned a client and we held meetings with said client about what they wanted for
-            their website. Our particular client told us he needed an accessible and user friendly remake of the last
-            webpage they had. We were tasked with creating a site that would be easy-to-use for older customers as well
-            as visually appealing and performant.
+            We created this website using React and deployed it with AWS. It was styled entirely using CSS as we had all decided not to use any libraries and wanted to challenge ourselves from a design standpoint.
           </p>
 
           <p className={styles.duguidDescription}>
-            We created this website using Next.js and deployed it with AWS. It was styled with Bootstrap, React-Bootstrap, and CSS.
-            We also leveraged an authorization platform, Auth0, for a login feature that allowed our website to distinguish between
-            employers, employees, and customers.
+            In terms of the actual functionality, I was responsible for the image carousel. I imported images and descriptions of products from a database using an Express server and loaded them into the carousel I created by hand. It featured a way to switch between different images of a chosen style or, if needed, changing to a different style of the same product using the array of bubbles provided. You were also able to click images to expand them, allowing the use of a hovering magnifying glass. In this expanded format, you could still switch between different images of the selected style.
           </p>
 
           <p className={styles.duguidDescription}>
-            This login feature allowed for different tabs to become available in the navbar where employees could see construction job
-            postings, locations, and different information about specific jobs, such as tools needed and a description of the job itself.
-
-            Employers would be able to post jobs and edit them, as well as assign, edit, or remove employees as needed.
-
-            Customers were able to request jobs and had different forms to fill out based on a triage system built into the site.
-
-            We also made general information available, a way to leave reviews, and a contact page.
+            Finally, you could also select different sizes and quantities of products and add them to your &quot;cart&quot;. This information, too, was available in the database our team had established a connection to. This server allowed us to import images of products, data pertaining to how much stock there was of each item and the differing sizes, and how the products were desrcibed. My team tested the different routes and requests for this data using Postman.
           </p>
         </div>
       </Modal.Body>

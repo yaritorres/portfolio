@@ -30,8 +30,8 @@ export default function Home() {
           className={styles.nightMode}
           src='../night-mode.png'
           alt='night mode symbol'
-          width={50}
-          height={50}
+          width={45}
+          height={45}
         />
       </div>
       <TabMatrix />
