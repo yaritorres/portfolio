@@ -12,15 +12,19 @@ export default function TabMatrix() {
   const [activeTab, setActiveTab] = useState('home');
   const homeHeaderStyles = {
     borderBottom: activeTab === 'home' ? 'none' : 'black solid 2px',
+    backgroundColor: '#20A39E'
   }
   const aboutHeaderStyles = {
     borderBottom: activeTab === 'about' ? 'none' : 'black solid 2px',
+    backgroundColor: '#EF5B5B'
   }
   const contactHeaderStyles = {
     borderBottom: activeTab === 'contact' ? 'none' : 'black solid 2px',
+    backgroundColor: '#F78735'
   }
   const projectsHeaderStyles = {
     borderBottom: activeTab === 'projects' ? 'none' : 'black solid 2px',
+    backgroundColor: '#FFB30F'
   }
 
   const animateBodyText = {
@@ -29,23 +33,23 @@ export default function TabMatrix() {
   }
 
   const animateHomeHeader = {
-    fadeColorIn: { backgroundColor: '#20A39E', borderBottom: 'transparent' },
-    fadeColorOut: { backgroundColor: '#20A39E', borderBottom: 'solid 2px #EDF4ED' }
+    fadeColorIn: { borderBottom: 'transparent' },
+    fadeColorOut: { borderBottom: 'solid 2px #EDF4ED' }
   }
 
   const animateAboutHeader = {
-    fadeColorIn: { backgroundColor: '#EF5B5B', borderBottom: 'transparent' },
-    fadeColorOut: { backgroundColor: '#EF5B5B', borderBottom: 'solid 2px #EDF4ED' }
+    fadeColorIn: { borderBottom: 'transparent' },
+    fadeColorOut: { borderBottom: 'solid 2px #EDF4ED' }
   }
 
   const animateContactHeader = {
-    fadeColorIn: { backgroundColor: '#F78735', borderBottom: 'transparent' },
-    fadeColorOut: { backgroundColor: '#F78735', borderBottom: 'solid 2px #EDF4ED' }
+    fadeColorIn: { borderBottom: 'transparent' },
+    fadeColorOut: { borderBottom: 'solid 2px #EDF4ED' }
   }
 
   const animateProjectsHeader = {
-    fadeColorIn: { backgroundColor: '#FFB30F', borderBottom: 'transparent' },
-    fadeColorOut: { backgroundColor: '#FFB30F', borderBottom: 'solid 2px #EDF4ED' }
+    fadeColorIn: { borderBottom: 'transparent' },
+    fadeColorOut: { borderBottom: 'solid 2px #EDF4ED' }
   }
 
   return (

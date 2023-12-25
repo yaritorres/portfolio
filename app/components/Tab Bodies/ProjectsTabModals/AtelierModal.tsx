@@ -18,31 +18,19 @@ export default function AtelierModal({ atelierShow, setAtelierShow }) {
         />
         <div className={styles.descriptionContainer}>
           <p className={styles.duguidDescription}>
-            This was a project I worked on alongside 5 other incredible software engineers.
+            The final larger-scale project is one I completed on my own within a team of other engineers doing their own separate versions indvidually.
           </p>
 
           <p className={styles.duguidDescription}>
-            For this project, were assigned a client and we held meetings with said client about what they wanted for
-            their website. Our particular client told us he needed an accessible and user friendly remake of the last
-            webpage they had. We were tasked with creating a site that would be easy-to-use for older customers as well
-            as visually appealing and performant.
+            For this project, I was tasked with upgrading the database used in the Royale project. The research and execution of the project was up to me as direction was purposefully limited to give us a chance to practice researching and experimenting, as well as challenging our back-end knowledge.
           </p>
 
           <p className={styles.duguidDescription}>
-            We created this website using Next.js and deployed it with AWS. It was styled with Bootstrap, React-Bootstrap, and CSS.
-            We also leveraged an authorization platform, Auth0, for a login feature that allowed our website to distinguish between
-            employers, employees, and customers.
+            The brunt of the project was in writing the SQL queries because I&apos;d already decided on using PostgreSQL as my database. Then, I learned about a way to make managing my data easier by leveraging a program called pgAdmin, a GUI that allowed me to better visualize my data and practice writing the appropriate queries. It also allowed me to see the time necessary to fulfill the requests, which led to me being able to research optimization, such as indexing and pool connections.
           </p>
 
           <p className={styles.duguidDescription}>
-            This login feature allowed for different tabs to become available in the navbar where employees could see construction job
-            postings, locations, and different information about specific jobs, such as tools needed and a description of the job itself.
-
-            Employers would be able to post jobs and edit them, as well as assign, edit, or remove employees as needed.
-
-            Customers were able to request jobs and had different forms to fill out based on a triage system built into the site.
-
-            We also made general information available, a way to leave reviews, and a contact page.
+            The last step was testing the new server with Loader.io. Easier queries were quicker, but further testing under a higher load proved too much for more complicated requests, even with minor optimization. After some research and dicsussion with my teammates, I learned about load balancing and ended up using NGINX to tie together 3 separate AWS-deployed servers. After everything, I was able to fulfill 1000 requests per second of the most complicated queries, all while using randomized customer IDs in Loader.io with an average response time of under 80ms.
           </p>
         </div>
       </Modal.Body>
