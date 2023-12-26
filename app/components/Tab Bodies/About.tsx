@@ -1,7 +1,7 @@
 import styles from '../../styles/tabMatrix.module.css'
 import { motion } from 'framer-motion';
 
-export default function AboutBody({ activeTab, animateBodyText }) {
+export default function AboutBody({ activeTab, animateBodyText } : { activeTab:string, animateBodyText:any }) {
   const aboutBodyStyles = {
     display: activeTab === 'about' ? 'block' : 'none',
   }

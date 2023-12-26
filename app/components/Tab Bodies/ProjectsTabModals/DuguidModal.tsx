@@ -3,7 +3,7 @@ import styles from '../../../styles/Tab Body Styles/projects.module.css';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 
-export default function DuguidModal({ duguidShow, setDuguidShow }) {
+export default function DuguidModal({ duguidShow, setDuguidShow } : { duguidShow:any, setDuguidShow:any }) {
   return (
     <Modal show={duguidShow} onHide={() => { setDuguidShow(false) }} size='lg' centered>
       <Modal.Header>

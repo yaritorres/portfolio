@@ -3,7 +3,7 @@ import styles from '../../../styles/Tab Body Styles/projects.module.css';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 
-export default function RoyaleModal({ royaleShow, setRoyaleShow }) {
+export default function RoyaleModal({ royaleShow, setRoyaleShow } : { royaleShow:any, setRoyaleShow:any }) {
   return (
     <Modal show={royaleShow} onHide={() => { setRoyaleShow(false) }} size='lg' centered>
       <Modal.Header>

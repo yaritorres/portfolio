@@ -1,7 +1,7 @@
 import styles from '../../styles/tabMatrix.module.css'
 import { motion } from 'framer-motion';
 
-export default function ContactBody({ activeTab, animateBodyText }) {
+export default function ContactBody({ activeTab, animateBodyText } : { activeTab:string, animateBodyText:any }) {
   const contactBodyStyles = {
     display: activeTab === 'contact' ? 'flex' : 'none',
   }

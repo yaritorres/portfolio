@@ -3,7 +3,7 @@ import styles from '../../../styles/Tab Body Styles/projects.module.css';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 
-export default function AtelierModal({ atelierShow, setAtelierShow }) {
+export default function AtelierModal({ atelierShow, setAtelierShow } : { atelierShow:any, setAtelierShow:any }) {
   return (
     <Modal show={atelierShow} onHide={() => { setAtelierShow(false) }} size='lg' centered>
       <Modal.Header>

@@ -6,7 +6,7 @@ import RoyaleModal from './ProjectsTabModals/RoyaleModal';
 import DuguidModal from './ProjectsTabModals/DuguidModal';
 import AtelierModal from './ProjectsTabModals/AtelierModal';
 
-export default function ProjectsBody({ activeTab, animateBodyText }) {
+export default function ProjectsBody({ activeTab, animateBodyText } : { activeTab:string, animateBodyText:any }) {
   const projectsBodyStyles = {
     display: activeTab === 'projects' ? 'flex' : 'none',
   }

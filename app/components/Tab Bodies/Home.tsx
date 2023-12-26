@@ -1,7 +1,7 @@
 import styles from '../../styles/tabMatrix.module.css'
 import { motion } from 'framer-motion';
 
-export default function HomeBody({ activeTab, animateBodyText }) {
+export default function HomeBody({ activeTab, animateBodyText } : { activeTab:string, animateBodyText:any }) {
   const homeBodyStyles = {
     display: activeTab === 'home' ? 'flex' : 'none',
   }
