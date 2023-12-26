@@ -86,6 +86,14 @@
 
 .projectsBody {
   background-color: #FFB30F;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll !important;
+}
+
+.projectsHeading {
+  font-family: 'Atkins Hyperlegible', sans-serif;
+  text-align: center;
 }
 
 .logosContainer {

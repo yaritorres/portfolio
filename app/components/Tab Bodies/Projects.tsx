@@ -16,6 +16,7 @@ export default function ProjectsBody({ activeTab, animateBodyText }) {
 
   return (
     <div className={`${styles.projectsBody} ${styles.tabBody}`} style={projectsBodyStyles}>
+      <h4 className={styles.projectsHeading}> click the gifs and images below to read more about my projects! </h4>
       <div className={`${styles.bodyText} ${styles.projectsImageContainer}`}>
         <div className={projectStyles.labeledImageContainer} onClick={() => { setRoyaleShow(true) }}>
           <motion.img
