@@ -7,7 +7,7 @@ export default function ContactBody({ activeTab, animateBodyText } : { activeTab
   }
   return (
     <div className={`${styles.contactBody} ${styles.tabBody}`} style={contactBodyStyles}>
-    <p className={`${styles.bodyText} ${styles.contactBodyText}`}>
+    <div className={`${styles.bodyText} ${styles.contactBodyText}`}>
       <motion.p
         animate={ activeTab === 'contact' ? 'fadeIn' : 'fadeOut'}
         variants={animateBodyText}
@@ -24,7 +24,7 @@ export default function ContactBody({ activeTab, animateBodyText } : { activeTab
       >
         click any of the logos below to see my work or send me a message.
       </motion.p>
-    </p>
+    </div>
     <div className={styles.logosContainer}>
       <a href='https://linkedin.com/in/yaritorresnicola' target='_blank' rel='noreferrer'>
         <motion.img
