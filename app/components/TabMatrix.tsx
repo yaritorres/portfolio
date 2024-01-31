@@ -106,7 +106,6 @@ export default function TabMatrix() {
       <AboutBody activeTab={activeTab} animateBodyText={animateBodyText} />
       <ContactBody activeTab={activeTab} animateBodyText={animateBodyText} />
       <ProjectsBody activeTab={activeTab} animateBodyText={animateBodyText} />
-      <div className={`${styles.borderFix}`}></div>
     </div>
   )
 }

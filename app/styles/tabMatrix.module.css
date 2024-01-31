@@ -25,6 +25,7 @@
   align-items: center;
   font-family: 'Atkins Hyperlegible', sans-serif;
   font-size: 20px;
+  z-index: 1000;
 }
 
 .tabHeader:hover {
@@ -40,13 +41,17 @@
   background-color: #20A39E;
 }
 
+.homeHeader {
+  border-right: #EDF4ED solid 1px;
+}
+
 .homeTextWithMargin {
   margin-bottom: 10px;
 }
 
 .aboutHeader {
-  border-left: transparent;
-  border-right: transparent;
+  border-left: #EDF4ED solid 1px;
+  border-right: #EDF4ED solid 1px;
 }
 
 .aboutBody {
@@ -60,7 +65,8 @@
 }
 
 .contactHeader {
-  border-right: transparent;
+  border-left: #EDF4ED solid 1px;
+  border-right: #EDF4ED solid 1px;
 }
 
 .contactBody {
@@ -84,11 +90,15 @@
   margin-bottom: 10px;
 }
 
+.projectsHeader {
+  border-left: #EDF4ED solid 1px;
+}
+
 .projectsBody {
   background-color: #FFB30F;
   display: flex;
   flex-direction: column;
-  overflow-y: scroll !important;
+  /* overflow-y: scroll !important; */
 }
 
 .projectsHeading {
@@ -109,7 +119,7 @@
   grid-template-columns: max-content max-content;
   grid-template-rows: max-content max-content;
   gap: 5%;
-  width: 100%;
+  width: 100;
   height: 50vh;
 }
 
@@ -117,6 +127,7 @@
   font-family: 'Atkins Hyperlegible', sans-serif;
   font-size: 22px;
   padding: 2%;
+  max-height: 50vh;
 }
 
 .tabBody {
@@ -130,15 +141,4 @@
   height: 60vh;
   width: 36vw;
   padding: 2%;
-}
-
-.borderFix {
-  position: absolute;
-  width: 4.1vw;
-  height: 7vh;
-  border-top: #EDF4ED 2px solid;
-  border-right: transparent 2px solid;
-  border-radius: 0px 10px 0px 0px;
-  right: 31.9vw;
-  top: 23.26vh;
 }
