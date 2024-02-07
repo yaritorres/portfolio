@@ -2,7 +2,6 @@
 'use client'
 import styles from './styles/page.module.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Navbar from './components/Navbar';
 import TabMatrix from './components/TabMatrix';
 import { useState } from 'react';
 
@@ -13,7 +12,6 @@ export default function Home() {
 
   return (
     <main className={styles.main} style={{ backgroundColor: mode === 'light' ? '#EDF4ED' : '#485665' }}>
-      {/* <Navbar /> */}
       <div className={styles.modeContainer}>
         <img
           onClick={() => { setMode('night') }}
