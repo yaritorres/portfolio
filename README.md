@@ -15,3 +15,9 @@ bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+I have also deployed to Vercel recently!
+
+Feel free to visit the link found in the 'About' section and tell me what you think! 
+
+I'll update as I find new ways to display the information and whenever I feel a change is needed.
