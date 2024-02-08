@@ -3,12 +3,17 @@
 import styles from './styles/page.module.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import TabMatrix from './components/TabMatrix';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function Home() {
   const [mode, setMode] = useState('night');
+  const [title, setTitle] = useState(`Yari's Portfolio!`);
   const lightModeStyles = {display: mode === 'light' ? 'block' : 'none'}
   const nightModeStyles = {display: mode === 'night' ? 'block' : 'none'}
+
+  useEffect(() => {
+    if (title) document.title = title
+  }, [title])
 
   return (
     <main className={styles.main} style={{ backgroundColor: mode === 'light' ? '#EDF4ED' : '#485665' }}>
