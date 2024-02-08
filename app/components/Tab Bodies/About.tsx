@@ -12,8 +12,8 @@ export default function AboutBody({ activeTab, animateBodyText } : { activeTab:s
         variants={animateBodyText}
         transition={{ duration: 0.2 }}
         src='../yari.jpeg'
-        height={250}
-        width={200}
+        height={210}
+        width={160}
         className={styles.aboutImage}
       />
       <motion.p

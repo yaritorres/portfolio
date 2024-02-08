@@ -16,3 +16,11 @@
   right: 35px;
   top: 35px;
 }
+
+.nightMode:hover {
+  cursor: pointer;
+}
+
+.lightMode:hover {
+  cursor: pointer;
+}

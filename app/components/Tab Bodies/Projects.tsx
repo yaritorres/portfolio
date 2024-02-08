@@ -16,7 +16,9 @@ export default function ProjectsBody({ activeTab, animateBodyText } : { activeTa
 
   return (
     <div className={`${styles.projectsBody} ${styles.tabBody}`} style={projectsBodyStyles}>
-      <h4 className={styles.projectsHeading}> click the gifs and images below to read more about my projects! </h4>
+      <p className={styles.projectsHeading} style={{fontSize: '20px'}}>
+        click the gifs and images below to read more about my projects!
+      </p>
       <div className={`${styles.bodyText} ${styles.projectsImageContainer}`}>
         <div className={projectStyles.labeledImageContainer} onClick={() => { setRoyaleShow(true) }}>
           <motion.img
@@ -25,8 +27,8 @@ export default function ProjectsBody({ activeTab, animateBodyText } : { activeTa
             transition={{ duration: 0.2 }}
             className={projectStyles.projectImage}
             src='../../royalepage.gif'
-            height={200}
-            width={250}
+            height={150}
+            width={200}
           />
           <motion.label
             animate={ activeTab === 'projects' ? 'fadeIn' : 'fadeOut'}
@@ -44,8 +46,8 @@ export default function ProjectsBody({ activeTab, animateBodyText } : { activeTa
             transition={{ duration: 0.2 }}
             className={projectStyles.projectImage}
             src='../../duguid.gif'
-            height={200}
-            width={250}
+            height={150}
+            width={200}
           />
           <motion.label
             animate={ activeTab === 'projects' ? 'fadeIn' : 'fadeOut'}
@@ -63,8 +65,8 @@ export default function ProjectsBody({ activeTab, animateBodyText } : { activeTa
             transition={{ duration: 0.2 }}
             className={projectStyles.projectImage}
             src='../../loaderio_testing.png'
-            height={200}
-            width={250}
+            height={150}
+            width={200}
           />
           <motion.label
             animate={ activeTab === 'projects' ? 'fadeIn' : 'fadeOut'}
